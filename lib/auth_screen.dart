@@ -39,13 +39,13 @@ class AuthScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               "Любимые места в одном приложении",
-              style: TextStyle(fontFamily: "Faberge", fontSize: 16),
+              style: TextStyle(fontFamily: "Poppins", fontSize: 16),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             const Text(
               "Войдите или зарегистрируйтесь, чтобы использовать приложение",
-              style: TextStyle(fontFamily: "Faberge", fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontFamily: "Poppins", fontSize: 16, color: Colors.grey),
               textAlign: TextAlign.center,
             ),
             const Spacer(),
@@ -63,7 +63,7 @@ class AuthScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(32),
                 ),
               ),
-              child: const Text("Войти", style: TextStyle(fontFamily: "Faberge", color: Colors.white)),
+              child: const Text("Войти", style: TextStyle(fontFamily: "Poppins", color: Colors.white)),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
@@ -81,7 +81,7 @@ class AuthScreen extends StatelessWidget {
               ),
               child: const Text(
                 "Создать аккаунт",
-                style: TextStyle(fontFamily: "Faberge", color: Colors.black),
+                style: TextStyle(fontFamily: "Poppins", color: Colors.black),
               ),
             ),
             const Spacer(),

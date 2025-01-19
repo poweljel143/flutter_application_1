@@ -29,7 +29,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Text(
                 "RU",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -38,7 +38,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Text(
                 "venture",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
@@ -60,7 +60,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Создание аккаунта",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -70,7 +70,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Введите ваше имя",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 14,
                   color: Colors.grey,
                 ),
@@ -88,7 +88,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Адрес эл. почты",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 14,
                   color: Colors.grey,
                 ),
@@ -106,7 +106,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Пароль",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 14,
                   color: Colors.grey,
                 ),
@@ -125,7 +125,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Повторите пароль",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 14,
                   color: Colors.grey,
                 ),
@@ -158,7 +158,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: Text(
                       "Я принимаю условия и политику конфиденциальности",
                       style: TextStyle(
-                        fontFamily: "Faberge",
+                        fontFamily: "Poppins",
                         fontSize: 12,
                         color: Colors.black,
                       ),
@@ -184,7 +184,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   child: const Text(
                     "Создать аккаунт",
                     style: TextStyle(
-                      fontFamily: "Faberge",
+                      fontFamily: "Poppins",
                       color: Colors.white,
                     ),
                   ),
@@ -217,7 +217,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 "Разрешить доступ к данным о местоположении устройства?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,

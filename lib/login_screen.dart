@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     "RU",
                     style: TextStyle(
-                      fontFamily: "Faberge",
+                      fontFamily: "Poppins",
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     "venture",
                     style: TextStyle(
-                      fontFamily: "Faberge",
+                      fontFamily: "Poppins",
                       fontSize: 24,
                       fontWeight: FontWeight.w400,
                     ),
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 "Рады видеть Вас снова!",
                 style: TextStyle(
-                  fontFamily: "Faberge",
+                  fontFamily: "Poppins",
                   fontSize: 24,
                   fontWeight: FontWeight.w500,
                 ),
@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
             const Text(
               "Адрес эл.почты",
               style: TextStyle(
-                fontFamily: "Faberge",
+                fontFamily: "Poppins",
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 color: Colors.black,
@@ -87,7 +87,7 @@ class LoginScreen extends StatelessWidget {
             const Text(
               "Пароль",
               style: TextStyle(
-                fontFamily: "Faberge",
+                fontFamily: "Poppins",
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 color: Colors.black,
@@ -118,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                 child: const Text(
                   "Забыли пароль?",
                   style: TextStyle(
-                    fontFamily: "Faberge",
+                    fontFamily: "Poppins",
                     fontSize: 14,
                     color: Colors.black,
                   ),
@@ -132,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                 const Text(
                   "Нет аккаунта?",
                   style: TextStyle(
-                    fontFamily: "Faberge",
+                    fontFamily: "Poppins",
                     fontSize: 14,
                     color: Colors.grey,
                   ),
@@ -147,7 +147,7 @@ class LoginScreen extends StatelessWidget {
                   child: const Text(
                     "Создать аккаунт",
                     style: TextStyle(
-                      fontFamily: "Faberge",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Colors.black,
                     ),
@@ -171,7 +171,7 @@ class LoginScreen extends StatelessWidget {
                 child: const Text(
                   "Войти",
                   style: TextStyle(
-                    fontFamily: "Faberge",
+                    fontFamily: "Poppins",
                     color: Colors.white,
                   ),
                 ),

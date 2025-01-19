@@ -5,6 +5,7 @@ class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SliderScreenState createState() => _SliderScreenState();
 }
 
@@ -13,9 +14,9 @@ class _SliderScreenState extends State<SliderScreen> {
 
   final List<Map<String, String>> sliderData = [
     {"text": "Откройте для себя новые места!", "image": "image1.jpg"},
-    {"text": "Планируйте маршруты легко!", "image": "image2.jpg"},
-    {"text": "Находите лучшие места поблизости!", "image": "image3.jpg"},
-    {"text": "Наслаждайтесь каждым моментом!", "image": "image4.jfif"},
+    {"text": "Планируйте маршруты с легкостью!", "image": "image2.jpg"},
+    {"text": "Делитесь своими впечатлениями!", "image": "image3.jpg"},
+    {"text": "Сохраняйте любимые места!", "image": "image4.jfif"},
   ];
 
   @override
@@ -53,7 +54,7 @@ class _SliderScreenState extends State<SliderScreen> {
                     Text(
                       sliderData[index]["text"]!,
                       style: const TextStyle(
-                        fontFamily: "Faberge",
+                        fontFamily: "Poppins",
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
@@ -95,7 +96,7 @@ class _SliderScreenState extends State<SliderScreen> {
                   child: const Text(
                     'Пропустить',
                     style: TextStyle(
-                      fontFamily: "Faberge",
+                      fontFamily: "Poppins",
                       fontSize: 16,
                       color: Colors.black,
                     ),
