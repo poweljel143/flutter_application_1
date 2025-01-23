@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'select_city_screen.dart';
 import 'registration_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -159,7 +160,10 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Действие на "Войти"
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SelectCityScreen()),
+                );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,

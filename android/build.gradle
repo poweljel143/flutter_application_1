@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        google()  // Используется для получения Android Gradle Plugin
+        mavenCentral()  // Можно добавить для других зависимостей
+    }
+    dependencies {
+        // Добавьте зависимость для Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:7.0.0'  // Используйте совместимую версию AGP
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -6,9 +17,11 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
 subprojects {
     project.evaluationDependsOn(':app')
 }
