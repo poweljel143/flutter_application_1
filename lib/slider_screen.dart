@@ -5,7 +5,6 @@ class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _SliderScreenState createState() => _SliderScreenState();
 }
 
@@ -13,16 +12,16 @@ class _SliderScreenState extends State<SliderScreen> {
   int currentIndex = 0;
 
   final List<Map<String, String>> sliderData = [
-    {"text": "Откройте для себя новые места!", "image": "image1.jpg"},
-    {"text": "Планируйте маршруты с легкостью!", "image": "image2.jpg"},
-    {"text": "Делитесь своими впечатлениями!", "image": "image3.jpg"},
-    {"text": "Сохраняйте любимые места!", "image": "image4.jfif"},
+    {"text": "Откройте для себя новые места!", "image": "assets/image1.jpg"},
+    {"text": "Планируйте маршруты с легкостью!", "image": "assets/image2.jpg"},
+    {"text": "Делитесь своими впечатлениями!", "image": "assets/image3.jpg"},
+    {"text": "Сохраняйте любимые места!", "image": "assets/image4.jfif"},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           Expanded(
@@ -44,19 +43,46 @@ class _SliderScreenState extends State<SliderScreen> {
                       height: 235,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(28),
-                        image: DecorationImage(
-                          image: AssetImage(sliderData[index]["image"]!),
-                          fit: BoxFit.cover,
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.transparent,
+                        ),
+                        gradient: null,
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(28),
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.transparent,
+                          ),
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromRGBO(2, 18, 254, 1),
+                              Color.fromRGBO(173, 255, 218, 1),
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(2),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(26),
+                          child: Image.asset(
+                            sliderData[index]["image"]!,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 150), // Подняли текст ниже
                     Text(
                       sliderData[index]["text"]!,
                       style: const TextStyle(
-                        fontFamily: "Poppins",
+                        fontFamily: "TT Norms Pro",
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -74,31 +100,51 @@ class _SliderScreenState extends State<SliderScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                     sliderData.length,
-                    (index) => buildDot(index),
+                        (index) => buildDot(index),
                   ),
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const AuthScreen()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    padding: const EdgeInsets.all(0),
-                    minimumSize: const Size(134, 35),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  child: const Text(
-                    'Пропустить',
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontSize: 16,
-                      color: Colors.black,
+                const SizedBox(height: 100),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 18),
+                    child: Container(
+                      width: 138,
+                      height: 28,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromRGBO(2, 18, 254, 1),
+                            Color.fromRGBO(173, 255, 218, 1),
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                      ),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const AuthScreen()),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          padding: EdgeInsets.zero,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                        child: const Text(
+                          'Пропустить',
+                          style: TextStyle(
+                            fontFamily: "TT Norms Pro Medium",
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -116,7 +162,7 @@ class _SliderScreenState extends State<SliderScreen> {
       height: 10,
       width: currentIndex == index ? 12 : 8,
       decoration: BoxDecoration(
-        color: currentIndex == index ? Colors.black : Colors.grey,
+        color: currentIndex == index ? Color.fromRGBO(173, 255, 218, 1) : Colors.grey,
         shape: BoxShape.circle,
       ),
     );

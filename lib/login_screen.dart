@@ -8,79 +8,81 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 50),
-            Align(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
-              ),
-            ),
-            const SizedBox(height: 20),
-            const Center(
-              child: Column(
-                children: [
-                  Text(
-                    "RU",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back, color: Colors.white),
+                ),
+                const Text(
+                  "ruventure",
+                  style: TextStyle(
+                    fontFamily: "TT Norms Pro",
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
-                  Text(
-                    "venture",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontSize: 24,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(width: 48),
+              ],
             ),
             const SizedBox(height: 40),
-            const Center(
-              child: Text(
-                "Рады видеть Вас снова!",
-                style: TextStyle(
-                  fontFamily: "Poppins",
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                ),
-                textAlign: TextAlign.center,
+            const Text(
+              "Рады видеть Вас снова!",
+              style: TextStyle(
+                fontFamily: "TT Norms Pro",
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 30),
             const Text(
               "Адрес эл.почты",
               style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: "TT Norms Pro",
                 fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 8),
-            TextFormField(
-              initialValue: "helloworld@gmail.com",
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "Введите адрес эл.почты",
-                prefixIcon: const Icon(Icons.email, color: Colors.black),
-                suffixIcon: const Icon(Icons.check_circle, color: Colors.black),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
-                  borderSide: BorderSide.none,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.transparent),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromRGBO(2, 18, 254, 1),
+                    Color.fromRGBO(173, 255, 218, 1),
+                  ],
+                ),
+              ),
+              padding: const EdgeInsets.all(2),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  initialValue: "helloworld@gmail.com",
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                    hintText: "Введите адрес эл.почты",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    suffixIcon: Icon(Icons.check_circle, color: Colors.green),
+                  ),
                 ),
               ),
             ),
@@ -88,100 +90,112 @@ class LoginScreen extends StatelessWidget {
             const Text(
               "Пароль",
               style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: "TT Norms Pro",
                 fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 8),
-            TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "Введите пароль",
-                prefixIcon: const Icon(Icons.lock, color: Colors.black),
-                suffixIcon: const Icon(Icons.visibility_off, color: Colors.black),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
-                  borderSide: BorderSide.none,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.transparent),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromRGBO(2, 18, 254, 1),
+                    Color.fromRGBO(173, 255, 218, 1),
+                  ],
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  // Действие на "Забыли пароль?"
-                },
-                child: const Text(
-                  "Забыли пароль?",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    fontSize: 14,
-                    color: Colors.black,
+              padding: const EdgeInsets.all(2),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  obscureText: true,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 6),
+                    hintText: "Введите пароль",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    suffixIcon: Icon(Icons.visibility_off, color: Colors.grey),
                   ),
                 ),
               ),
             ),
-            const Spacer(),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Забыли пароль?",
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [
+                    Color.fromRGBO(2, 18, 254, 1),
+                    Color.fromRGBO(173, 255, 218, 1),
+                  ]),
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SelectCityScreen()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    minimumSize: const Size(301, 56),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                  ),
+                  child: const Text(
+                    "Войти",
+                    style: TextStyle(
+                      fontFamily: "TT Norms Pro",
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
                   "Нет аккаунта?",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    fontSize: 14,
-                    color: Colors.grey,
-                  ),
+                  style: TextStyle(color: Colors.white),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RegistrationScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const RegistrationScreen()),
                     );
                   },
                   child: const Text(
                     "Создать аккаунт",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(color: Colors.blueAccent),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 10),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SelectCityScreen()),
-                );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  minimumSize: const Size(301, 56),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                  ),
-                ),
-                child: const Text(
-                  "Войти",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
           ],
         ),
       ),

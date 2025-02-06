@@ -8,7 +8,7 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
@@ -20,7 +20,7 @@ class AuthScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
+                icon: const Icon(Icons.arrow_back, color: Color.fromRGBO(173, 255, 218, 1)),
               ),
             ),
             const Spacer(),
@@ -39,13 +39,15 @@ class AuthScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               "Любимые места в одном приложении",
-              style: TextStyle(fontFamily: "Poppins", fontSize: 16),
+              style: TextStyle(fontFamily: "TT Norms Pro", fontSize: 16, color: Color.fromRGBO(
+                  2, 18, 254, 1)),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             const Text(
               "Войдите или зарегистрируйтесь, чтобы использовать приложение",
-              style: TextStyle(fontFamily: "Poppins", fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontFamily: "TT Norms Pro", fontSize: 16, color: Color.fromRGBO(
+                  255, 255, 255, 1.0)),
               textAlign: TextAlign.center,
             ),
             const Spacer(),
@@ -53,17 +55,17 @@ class AuthScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(2, 18, 254, 1),
                 minimumSize: const Size(301, 56),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(32),
                 ),
               ),
-              child: const Text("Войти", style: TextStyle(fontFamily: "Poppins", color: Colors.white)),
+              child: const Text("Войти", style: TextStyle(fontFamily: "TT Norms Pro", color: Colors.white)),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
@@ -81,7 +83,7 @@ class AuthScreen extends StatelessWidget {
               ),
               child: const Text(
                 "Создать аккаунт",
-                style: TextStyle(fontFamily: "Poppins", color: Colors.black),
+                style: TextStyle(fontFamily: "TT Norms Pro", color: Color.fromRGBO(173, 255, 218, 1)),
               ),
             ),
             const Spacer(),
